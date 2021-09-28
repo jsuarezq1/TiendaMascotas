@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaforg">
+<head>
+<meta charset="ISO-8859-1">
+<title>Formulario Usuarios</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt=4">
+	<table>
+		<thead> 
+		<tr>
+			<th>Cedula</th>
+			<th>Nombre</th>
+			<th>Correo</th>
+			<th>Usuario</th>
+			<th>Password</th>
+			<th>Acciones</th>	
+		</tr>
+		</thead>
+		<tbody>
+		<tr th:each="personas:${personas}">
+			<td th:text="${personas.Cedula}"></td>
+			<td th:text="${personas.Nombre}"></td>
+			<td>${personas.Correo}</td>
+			<td>${personas.Usuario}</td>
+			<td>${personas.Clave}</td>
+			
+			<td>
+				<a clase="btn btn-warning">Editar</a>
+				<a class0"btn btn-danger">Eliminar</a>
+		</tr>
+		</tbody>
+	</table>
+
+</div>
+
+</body>
+</html>
